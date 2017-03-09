@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!--<meta http-equiv=Content-Type content="text/html;charset=utf-8">-->
+<title>MessiMercy</title>
+<head>
+    <script src="/js/jquery-1.5.1.js" type="text/javascript"></script>
+</head>
+<body>
+<div>
+    <div th:each="news:${newss}">
+        <p>
+            <a target="_blank" th:href="${news.url}" th:text="'标题：'+${news.title}">loading......</a>
+        </p>
+        <p th:text="'内容：'+${news.content}">loading......</p>
+        <p th:text="'时间：'+${news.time}">loading......</p>
+        <p th:text="'命中分：'+${news.score}">loading......</p>
+    </div>
+</div>
+<a id="forepage">上一页</a><a id="pageurl">下一页</a>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $('document').ready();
+    var url = window.location.href;
+    var size = parseInt(url.match(/size=(\d+)/)[1]);
+    var from = parseInt(url.match(/from=(\d+)/)[1]);
+    var nextpage = from + size;
+    var forepage = from - size;
+    if (forepage <= 0) forepage = 0;
+    var nexturl = url.replace(/from=(\d+)/, "from=" + nextpage);
+    var foreurl = url.replace(/from=(\d+)/, "from=" + forepage);
+    $('#forepage').attr("href", foreurl);
+    $("#pageurl").attr("href", nexturl);
+    /*]]>*/
+</script>
+</body>
+</html>

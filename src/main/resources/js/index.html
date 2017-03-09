@@ -1,0 +1,89 @@
+<html>
+    <!--<meta http-equiv=Content-Type content="text/html;charset=utf-8">-->
+    <head>
+        <title>MessiMercy</title>
+        <script src="JQ/jquery-1.5.1.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+    </head>
+    <body>
+<!--        <p>在下方输入你想要插入的文本</p>
+        <form action ="/posts/addItem" id="form1" method = "post">
+            <p>标题：<input type = "text" name = "title"/></p>
+            <p>内容：<input type = "text" name = "content"/></p>
+            <p>序号：<input type = "id" name = "id" id="number"/></p>
+            <div>
+                <lable id="errorMes" style ="display:none;color: red"></label>
+            </div>
+            <input type = "button" onclick="checkForm()" value = "提交"/>-->
+            <div>
+                <table class="table-striped" style="width:100%">
+                    <thead class="">
+                    <td>名字</td>
+                    <td>年龄</td>
+                    <td>性别</td>
+                    <td>操作</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td><button onclick="Del()">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td><button onclick="Del()">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td><button onclick="Del()">删除</button></td>
+                        </tr>
+                        <tr>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td>zk</td>
+                            <td><button onclick="Del()">删除</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+
+    </body>
+</html>
+<script>
+    $('document').ready();
+    $('#number').change(function () {
+        var id = $(this).val();
+        var reg = new RegExp("^[0-9]*$");
+        if (!reg.test(id)) {
+            $('#errorMes').html("必须输入数字");
+            $('#errorMes').show();
+        } else {
+            alert(1);
+            $('#errorMes').hide();
+        }
+    });
+    function checkForm()
+    {
+        var id = $('#number').val();
+        var reg = new RegExp("^[0-9]*$");
+//        flag = validate();
+        if (!reg.test(id)) {
+            $('#errorMes').html("必须输入数字");
+            $('#errorMes').show();
+        } else {
+//            $('form1').submit();
+            alert(1);
+            $('#errorMes').hide();
+        }
+    }
+    function validate() {
+        return false;
+    }
+
+</script>

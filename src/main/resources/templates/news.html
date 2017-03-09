@@ -1,0 +1,37 @@
+<html>
+<!--<meta http-equiv=Content-Type content="text/html;charset=utf-8">-->
+<title>MessiMercy</title>
+<script src="/js/jquery-1.5.1.js" type="text/javascript"></script>
+<body>
+<form target="_blank" method="get" action="/news/search">
+    <div>
+        <input type="text" size="50" name="keyWords" value="在此输入关键词搜索新闻"/>
+        <input type="hidden" name="from" value="0"/>
+        <input type="hidden" name="size" value="10"/>
+        <label for="time">选择时间：</label><input id="time" name="time" type="date" value=""/>
+        <input type="submit" value="搜索"/>
+    </div>
+</form>
+<form target="_blank" method="get" action="/wenshu/search">
+    <div>
+        <input type="text" size="50" name="keyWords" value="在此输入关键词搜索文书"/>
+        <input type="hidden" name="from" value="0"/>
+        <input type="hidden" name="size" value="10"/>
+        <label for="time">选择时间：</label><input id="time1" name="time" type="date" value=""/>
+        <input type="submit" value="搜索"/>
+    </div>
+</form>
+<form method="post" action="/news/crawl" onsubmit="showTip()">
+    <div>
+        <input type="text" size="50" name="keyWords" value="在此提交关键词开始抓取新闻"/>
+        <input type="submit" value="提交"/>
+        <label id="quest" hidden="hidden">爬虫请求已提交</label>
+    </div>
+</form>
+<script>
+    function showTip() {
+        $('#quest').show()
+    }
+</script>
+</body>
+</html>

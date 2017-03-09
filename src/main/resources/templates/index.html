@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<!--<meta http-equiv=Content-Type content="text/html;charset=utf-8">-->
+<title>MessiMercy</title>
+<body>
+<h1 th:text="${content}" align="left"></h1>
+<!--<p><a href="http://www.baidu.com" target="_blank" style="color: red">赶快去搬砖</a></p>-->
+<!--<p><a href="http://www.zhihu.com" target="_blank" style="color: black">哦,是吗</a></p>-->
+<!--<a href="http://www.douyutv.com/directory/game/DOTA2" target="_blank"><img src="/icon.png">Icon</img></a>-->
+<form target="_blank" method="get" action="https://www.baidu.com/s">
+    <div><input type="text" size="50" name="wd" value=""/><input type="submit" value="百度搜索"/></div>
+</form>
+<p><a href="/posts/create" target="_blank">点击此处新增内容</a></p>
+<!-- <p th:text = "标题： +${post.title}"></p>
+<p th:text = "内容： +${post.content}"></p>
+<p th:text = "创建时间： +${post.createdTime}"></p> -->
+<div>
+    <div th:each="post:${posts}">
+        <p>
+            <a th:href="@{'/posts/'+${post.id}}" th:text="'标题：'+${post.title}">loading......</a>
+        </p>
+        <p th:text="'内容：'+${post.content}">loading......</p>
+        <p th:text="'时间：'+${post.created}">loading......</p>
+    </div>
+</div>
+<a><img height="100" width="250" src="/img/mac.jpg"/></a>
+<!--<form target = "_blank" method="get" action="">
+<div><input  type="text" size="50"  name="q"  value="" /><input type="submit" /></div>
+</form>-->
+</body>
+</html>

@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Class-Path: WebLib\spring-context-4.1.7.RELEASE.jar WebLib\tomcat-embe
+ d-core-8.0.23.jar WebLib\javassist-3.18.1-GA.jar WebLib\spring-expres
+ sion-4.1.7.RELEASE.jar WebLib\MessiCralwer.jar WebLib\commons-lang3-3
+ .3.2.jar WebLib\mysql-connector-java-5.1.35.jar WebLib\ognl-3.0.8.jar
+  WebLib\tomcat-embed-websocket-8.0.23.jar WebLib\spring-aspects-4.1.7
+ .RELEASE.jar WebLib\javax.transaction-api-1.2.jar WebLib\tomcat-embed
+ -el-8.0.23.jar WebLib\hibernate-core-4.3.10.Final.jar WebLib\commons-
+ lang-2.6.jar WebLib\httpcore-4.4.4.jar WebLib\logback-classic-1.1.3.j
+ ar WebLib\spring-boot-starter-aop-1.2.5.RELEASE.jar WebLib\spring-dat
+ a-commons-1.9.3.RELEASE.jar WebLib\spring-data-jpa-1.7.3.RELEASE.jar 
+ WebLib\log4j-over-slf4j-1.7.12.jar WebLib\commons-codec-1.9.jar WebLi
+ b\spring-jdbc-4.1.7.RELEASE.jar WebLib\xml-apis-1.0.b2.jar WebLib\h2-
+ 1.4.187.jar WebLib\spring-orm-4.1.7.RELEASE.jar WebLib\tomcat-juli-8.
+ 0.23.jar WebLib\logback-core-1.1.3.jar WebLib\jedis-2.9.0.jar WebLib\
+ thymeleaf-spring4-2.1.4.RELEASE.jar WebLib\validation-api-1.1.0.Final
+ .jar WebLib\commons-pool2-2.2.jar WebLib\spring-boot-starter-data-jpa
+ -1.2.5.RELEASE.jar WebLib\tomcat-jdbc-8.0.23.jar WebLib\hibernate-com
+ mons-annotations-4.0.5.Final.jar WebLib\aspectjweaver-1.8.6.jar WebLi
+ b\tomcat-embed-logging-juli-8.0.23.jar WebLib\spring-boot-1.2.5.RELEA
+ SE.jar WebLib\spring-boot-starter-web-1.2.5.RELEASE.jar WebLib\spring
+ -web-4.1.7.RELEASE.jar WebLib\spring-tx-4.1.7.RELEASE.jar WebLib\jul-
+ to-slf4j-1.7.12.jar WebLib\aspectjrt-1.8.6.jar WebLib\spring-webmvc-4
+ .1.7.RELEASE.jar WebLib\snakeyaml-1.14.jar WebLib\spring-aop-4.1.7.RE
+ LEASE.jar WebLib\jboss-logging-annotations-1.2.0.Beta1.jar WebLib\spr
+ ing-boot-starter-jdbc-1.2.5.RELEASE.jar WebLib\hibernate-jpa-2.1-api-
+ 1.0.0.Final.jar WebLib\spring-boot-starter-logging-1.2.5.RELEASE.jar 
+ WebLib\thymeleaf-2.1.4.RELEASE.jar WebLib\spring-boot-starter-thymele
+ af-1.2.5.RELEASE.jar WebLib\thymeleaf-layout-dialect-1.2.9.jar WebLib
+ \spring-boot-autoconfigure-1.2.5.RELEASE.jar WebLib\jackson-databind-
+ 2.4.6.jar WebLib\slf4j-api-1.7.12.jar WebLib\guava-18.0.jar WebLib\ja
+ ndex-1.1.0.Final.jar WebLib\jackson-core-2.4.6.jar WebLib\unbescape-1
+ .1.0.RELEASE.jar WebLib\dom4j-1.6.1.jar WebLib\spring-boot-starter-1.
+ 2.5.RELEASE.jar WebLib\gson-2.6.2.jar WebLib\juniversalchardet-1.0.3.
+ jar WebLib\aopalliance-1.0.jar WebLib\classmate-1.0.0.jar WebLib\jbos
+ s-logging-3.1.3.GA.jar WebLib\spring-core-4.1.7.RELEASE.jar WebLib\ht
+ tpclient-4.5.2.jar WebLib\jcl-over-slf4j-1.7.12.jar WebLib\hibernate-
+ entitymanager-4.3.10.Final.jar WebLib\jackson-annotations-2.4.6.jar W
+ ebLib\hibernate-validator-5.1.3.Final.jar WebLib\spring-boot-starter-
+ tomcat-1.2.5.RELEASE.jar WebLib\spring-beans-4.1.7.RELEASE.jar WebLib
+ \antlr-2.7.7.jar
+Main-Class: com.web.SpringWebDevelopmentApplication
+

@@ -1,0 +1,76 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<!-- <meta http-equiv=Content-Type content="text/html;charset=utf-8"> -->
+<head>
+    <title>MessiMercy</title>
+    <script src="/js/jquery-1.5.1.js" type="text/javascript"></script>
+</head>
+<body>
+<p>在下方输入你想要插入的文本</p>
+<form action="/posts/addItem" id="form1" method="post" th:object="${post}">
+    <div>
+        <label for="title">标题: </label>
+        <input type="text" name="title" id="ttt" th:field="*{title}"/>
+        <p th:if="${#fields.hasErrors('title')}" th:errors="*{title}">标题长度必须在5-10之间</p>
+    </div>
+    <div>
+        <label for="content">内容: </label>
+        <input type="text" name="content" th:field="*{content}"/>
+        <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}">内容长度必须大于10</p>
+    </div>
+    <label for="id">序号: </label>
+    <input type="id" name="id" id="number"/>
+    <div>
+        <label id="errorMes" style="display:none;color: red"></label>
+    </div>
+    <input type="button" onclick="checkForm()" value="提交"/>
+
+</form>
+</body>
+</html>
+<script>
+    $('document').ready();
+    $('#number').change(function () {
+        var id = $(this).val();
+        var reg = new RegExp("^[0-9]*$");
+        if (!reg.test(id)) {
+            $('#errorMes').html("必须输入数字");
+            $('#errorMes').show();
+        } else {
+            // alert(1);
+            $('#errorMes').hide();
+        }
+    });
+    function checkForm() {
+        var id = $('#number').val();
+        var reg = new RegExp("^[0-9]*$");
+        flag = validate();
+        if (!reg.test(id)) {
+            $('#errorMes').html("必须输入数字");
+            $('#errorMes').show();
+        } else {
+            if (flag) {
+                $('#form1').submit();
+                $('#errorMes').hide();
+                alert("表单已提交");
+            } else {
+                alert("title检查不过关，请重新输入");
+            }
+
+            // alert(1);
+
+        }
+    }
+    function validate() {
+        var title = $("#ttt").val();
+        var len = title.length;
+        // alert(len);
+        if (len > 5) {
+            return true;
+        } else {
+            return false;
+        }
+        return true;
+
+    }
+
+</script>
